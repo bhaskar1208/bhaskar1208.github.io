@@ -41,6 +41,18 @@
             //alert("Error");
           });
       });
+ 	$(document).ready(function() {
+	        let fromDate=new Date("2018-10-05");
+	        let toDate=new Date();
+	        let years = toDate.getFullYear() - fromDate.getFullYear();
+	        let months = toDate.getMonth() - fromDate.getMonth();
+	
+	        if (months < 0) {
+	          years--;
+	          months += 12;
+	        }
+	        $("#experience").text(years +"."+months +" years ");
+      });
     </script>
   </head>
     <body id="top">
@@ -125,7 +137,7 @@
                 <h1 class="arrow text-center">A little <span>about</span> me</h1><!-- Headline -->
 				<!-- about / welcome text -->
               <p>
-                My name is Bhaskar Deka and I am a full-stack Web Application Developer and Software Developer with 5.7 years of professional experience, passionate to solving application bugs currently living in Guwahati,Assam, India. I have a Bachelor of Engineering in Computer Science from <a href="https://www.cit.ac.in" target="_blank">Central Institute of Technology,Kokrajhar</a>, and my primary focus and inspiration for my studies is Web Development. I am both driven and self-motivated, and I am constantly experimenting with new technologies and techniques. I am very passionate about Web Development, and strive to better myself as a developer, and the development community as a whole. My hunger for knowledge and determination to turn information into action has contributed to the most recent successes.
+                My name is Bhaskar Deka and I am a full-stack Web Application Developer and Software Developer with <span id="experience"></span> of professional experience, passionate to solving application bugs currently living in Guwahati,Assam, India. I have a Bachelor of Engineering in Computer Science from <a href="https://www.cit.ac.in" target="_blank">Central Institute of Technology,Kokrajhar</a>, and my primary focus and inspiration for my studies is Web Development. I am both driven and self-motivated, and I am constantly experimenting with new technologies and techniques. I am very passionate about Web Development, and strive to better myself as a developer, and the development community as a whole. My hunger for knowledge and determination to turn information into action has contributed to the most recent successes.
               </p>
                   
                 <p>
